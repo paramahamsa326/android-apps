@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Untitled</title>
+<script type="text/javascript">
+var StoreDetails = [
+  ['Please select an option','','','','','','','',''],
+  ['91146','Ramgopal','Yarramaneni','Intern','9502420278','kukatpally','131','20th feb.2013','yramgopa@opentext.com'],
+  ['91147','First Name','Last Name','Designation','Contact NO','Address','Seat no','dd/mm/yy','Email'],
+  ['91148','First Name','Last Name','Designation','Contact NO','Address','Seat no','dd/mm/yy','Email'],
+  ['91149','RajKishore','Nadimpalli','Intern','9573397224','chanda nagar','130 ','18th mar.2013','rnadimpa@opentext.com'],
+  ['91150','First Name','Last Name','Designation','Contact NO','Address','Seat no','dd/mm/yy','Email'],
+  ['91151','First Name','Last Name','Designation','Contact NO','Address','Seat no','dd/mm/yy','Email'],
+['91152','Sree veer','Bandla','Intern','9492405337','L.B nagar','285','18th mar.2013','bsreevee@opentext.com'], // Note: no comma
+];
+function Setup(TA) {
+  var str = "<select id='Store' onchange='StoreInfo()'>";
+  for (var i=0; i<StoreDetails.length; i++) {
+    str += '<option value="'+StoreDetails[i].join('|')+'">'+StoreDetails[i][0]+'</option>';
+  }
+  str +='</select>';
+  document.write(str);
+
+}
+function StoreInfo() {
+  var sel = document.getElementById('Store').selectedIndex;
+  var tmp = [];  tmp.push(sel);
+  for (var i=1; i<9; i++) { tmp.push(StoreDetails[sel][i]); }
+  document.getElementById('txtName').value = tmp[1];
+  document.getElementById('txtAddr1').value = tmp[2];
+  document.getElementById('txtAddr2').value = tmp[3];
+  document.getElementById('txtAddr3').value = tmp[4];
+  document.getElementById('txtPhone').value = tmp[5];
+  document.getElementById('txtFAX').value = tmp[6];
+  document.getElementById('txtEmail').value = tmp[7];
+  document.getElementById('txtWebpage').value = tmp[8];
+}
+</script>
+</head>
+<body>
+<form name="theform" onsubmit="CheckForm()">
+<script type="text/javascript">Setup();</script>
+<table border="0">
+<tr><td>First Name:</td><td><input type="text" id="txtName" size="30" value=""></td></tr>
+<tr><td>Last Name:</td><td><input type="text" id="txtAddr1" size="30" value=""></td></tr>
+<tr><td>Designation:</td><td><input type="text" id="txtAddr2" size="30" value=""></td></tr>
+<tr><td>Contact NO:</td><td><input type="text" id="txtAddr3" size="30" value=""></td></tr>
+<tr><td>Address:</td><td><input type="text" id="txtPhone" size="30" value=""></td></tr>
+<tr><td>Seat no:</td><td><input type="text" id="txtFAX" size="30" value=""></td></tr>
+<tr><td>Date of joining:</td><td><input type="text" id="txtEmail" size="30" value=""></td></tr>
+<tr><td>Email:</td><td><input type="text" id="txtWebpage" size="30" value=""></td></tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:example="http://schemas.android.com/apk/res/com.example.hm5_vadlamudi">
+
+    <PreferenceCategory 
+        android:title="Settings" >
+    
+        <Preference 
+    	    android:title="Ant Killer"
+    	    android:summary="\u00A9 2015 Puppala and Peram Co Inc\u2122"
+    	    android:selectable="false"/>  
+    	<Preference 
+    	    android:title="Version"
+    	    android:summary="@string/action_version"
+    	    android:selectable="false"/>  
+    	<Preference 
+    	    android:title="About Kill Ants App"
+    	    android:summary="Learn more about the app" 
+    	    android:key="key_company_info" />
+		<Preference
+			android:title="Share this App"
+			android:summary="Please share The Zoo App with your friends and Family through email"
+			android:key="share_the_app" />
+
+		<CheckBoxPreference
+    	    android:title="Play Background Music"
+    	    android:key="prefs_music_enabled"
+    	    android:defaultValue="true" />
+    	<CheckBoxPreference 
+    	    android:title="Play ant Sound"
+    	    android:key="prefs_animalsound_enabled"
+    	    android:defaultValue="true" />
+    	
+ 	</PreferenceCategory>	   
+</PreferenceScreen>

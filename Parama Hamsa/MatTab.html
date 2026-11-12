@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<script>
+function insRow(eleId)
+{
+for(i=0; i<3; i++){
+
+var x=document.getElementById('myTable1').insertRow('i');
+for(j=0; j<3; j++){
+var y=x.insertCell(j);
+y.innerHTML='<input name="mat[i][j]" type="text" >';
+}
+}
+}
+function insRow1()
+{
+for(i=0; i<3; i++){
+
+var x=document.getElementById('myTable2').insertRow('i');
+for(j=0; j<3; j++){
+var y=x.insertCell(j);
+y.innerHTML='<input name="mat[i][j]" type="text" >';
+}
+}
+}
+</script>
+</head>
+
+<input type="button" onclick="insRow(myTable1)" value="Enter MAT1:">
+<table id="myTable1" border="1">
+</table>
+</br>
+<input type="button" onclick="insRow1(myTable2)" value="Enter MAT2:">
+<table id="myTable2" border="1">
+</table>
+
+</body>
+</html>

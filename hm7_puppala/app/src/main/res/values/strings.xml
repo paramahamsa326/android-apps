@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TheZoo4</string>
+
+    <string name="app_version">Version 1.4.0</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

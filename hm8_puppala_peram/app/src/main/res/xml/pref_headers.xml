@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<header 
+	    android:fragment="com.puppala.anil.hm8_puppala_peram.PrefActivitySettings"
+	    android:title="Preferences" 
+	    android:icon="@+drawable/action_help">
+	</header>
+ 		 	
+</preference-headers>
